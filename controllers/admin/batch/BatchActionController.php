@@ -1,0 +1,76 @@
+<?php
+
+namespace controllers\admin\batch;
+
+use core\data_base\DB;
+use core\routing\Router;
+use core\session\Session;
+
+class BatchActionController extends \controllers\Controller
+{
+    public function put(int $id) {
+        $author = DB::query()
+            ->from("batch")
+            ->where("id", "=", $id)
+            ->first();
+
+        if (!$author) {
+            Session::flash("old_input", $_POST);
+            Router::redirect(Router::back(Router::route("index")));
+            return;
+        }
+
+        $valid = true;
+        if (empty($_POST["name"])) {
+            $valid = false;
+            Session::flash("input_errors.name", "Поле \"Название\" обязательно для заполнения.");
+        }
+
+        if (!$valid) {
+            Session::flash("old_input", $_POST);
+            Router::redirect(Router::back(Router::route("index")));
+            return;
+        }
+
+        DB::query()
+            ->from("batch")
+            ->where("id", "=", $id)
+            ->update([
+                "name" => $_POST["name"],
+            ]);
+
+        Router::redirect(Router::back());
+    }
+
+    public function store() {
+
+        $valid = true;
+        if (empty($_POST["name"])) {
+            $valid = false;
+            Session::flash("input_errors.name", "Поле \"Название\" обязательно для заполнения.");
+        }
+        if (!$valid) {
+            Session::flash("old_input", $_POST);
+            Router::redirect(Router::back(Router::route("index")));
+            return;
+        }
+
+        DB::query()
+            ->from("batch")
+            ->set([
+                "name" => $_POST["name"],
+            ])
+            ->insert();
+
+        Router::redirect(Router::route("admin.batch.list"));
+    }
+
+    public function delete(int $id) {
+        DB::query()
+            ->from("batch")
+            ->where("id", "=", $id)
+            ->delete();
+
+        Router::redirect(Router::route("admin.batch.list"));
+    }
+}

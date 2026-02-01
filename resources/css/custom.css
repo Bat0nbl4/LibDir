@@ -1,0 +1,99 @@
+.logo-img {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.avatar-big {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.min-w-150 {
+    min-width: 150px;
+}
+
+.min-w-50 {
+    min-width: 50px;
+}
+
+.decor_big_star {
+    width: 40px;
+    height: 40px;
+}
+
+.decor_star {
+    width: 30px;
+    height: 30px;
+}
+
+.star {
+    width: 60px;
+    height: 60px;
+    border: none;
+    padding: 5px;
+    background: none;
+    transition: 0.25s;
+    box-sizing: border-box;
+    &:hover {
+        transform: scale(1.2);
+    }
+    &:active {
+        transition: 0.1s;
+        transform: scale(0.9);
+    }
+}
+
+.w-5 {
+    width: 5%;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.progress {
+    transition: 0.2s;
+    width: var(--progress);
+}
+
+.w-0 {
+    width: 0%;
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+.max-w-800 {
+    max-width: 800px;
+}
+
+.max-w-1000 {
+    max-width: 1000px;
+}
+
+.cover {
+    aspect-ratio: 4 / 6;
+}
+
+.hover {
+    transition: 0.2s;
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.border-dotted {
+    box-sizing: border-box;
+    border-bottom: 4px dotted;
+}

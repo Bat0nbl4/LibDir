@@ -1,0 +1,75 @@
+.slider {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
+.window {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.slides {
+	display: flex;
+	transition: transform 0.2s ease-in-out;
+}
+
+.slide {
+	min-width: 25%;
+	width: 100%;
+	aspect-ratio: 2 / 3;
+	box-sizing: border-box;
+	padding: 0 5px;
+}
+
+@media screen and (width < 750px) {
+	.slide {
+		min-width: 50%;
+	}
+}
+
+.slide img {
+	width: 100%;
+	height: auto;
+}
+
+.prev, .next {
+	background-color: rgba(81, 153, 209, 0.3);
+	color: white;
+	border: none;
+	flex: 0 1 auto;
+	min-width: 30px;
+	padding: 1%;
+	max-width: 60px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	pointer-events: none;
+}
+
+
+
+.slider:hover .prev, .slider:hover .next {
+	pointer-events: all;
+	background-color: rgba(81, 153, 209, 0.6);
+}
+
+.prev {
+	left: 0;
+}
+
+.next {
+	right: 0;
+}
+
+.slider:hover .prev:hover {
+	opacity: 1;
+	background-color: rgba(81, 153, 209, 1);
+}
+
+.slider:hover .next:hover {
+	opacity: 1;
+	background-color: rgba(81, 153, 209, 1);
+}
