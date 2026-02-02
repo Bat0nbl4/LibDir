@@ -36,6 +36,10 @@ class BookActionController extends Controller
             $valid = false;
             Session::flash("input_errors.count", "Поле \"В наличии\" обязательно для заполнения.");
         }
+        if (!empty($_POST["price"]) and $_POST["price"] <= 0) {
+            $valid = false;
+            Session::flash("input_errors.price", "Цена не может быть отрицательной.");
+        }
 
         if ($_FILES["cover"]) {
             if ($_FILES["cover"]["name"]) {
@@ -130,7 +134,7 @@ class BookActionController extends Controller
             $valid = false;
             Session::flash("input_errors.count", "Поле \"В наличии\" обязательно для заполнения.");
         }
-        if (!empty($_POST["price"]) and $_POST["price"] >= 0) {
+        if (!empty($_POST["price"]) and $_POST["price"] <= 0) {
             $valid = false;
             Session::flash("input_errors.price", "Цена не может быть отрицательной.");
         }
