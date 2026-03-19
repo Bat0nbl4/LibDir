@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ru">
 <?php \core\rendering\View::IncludeComponent("base/head") ?>
-<body class="d-flex flex-column min-vh-100">
+<body>
     <?php \core\rendering\View::IncludeComponent("base/header") ?>
-    <main class="container flex-fill">
+    <main>
         <?php \core\rendering\View::content() ?>
     </main>
     <?php \core\rendering\View::IncludeComponent("base/footer") ?>
