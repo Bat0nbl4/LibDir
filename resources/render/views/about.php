@@ -13,25 +13,25 @@
     <div class="container py-5">
         <h2 class="text-main mb-4">Основные направления работы</h2>
         <div class="row">
-            <div class="col-12 col-xl-6 col-xxl-3 p-2">
+            <div class="col-12 col-md-6 col-xxl-3 p-2">
                 <div class="card p-4 rounded-5 h-100">
                     <h4 class="text-purple">🌟 Развитие талантов</h4>
                     <p>Создание условий для самореализации подростков и молодёжи, развитие творческого, профессионального, интеллектуального потенциалов.</p>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 col-xxl-3 p-2">
+            <div class="col-12 col-md-6 col-xxl-3 p-2">
                 <div class="card p-4 rounded-5 h-100">
                      <h4 class="text-purple">🎖️ Патриотическое воспитание</h4>
                     <p>Гражданское и патриотическое воспитание, формирование правовых, культурных и нравственных ценностей.</p>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 col-xxl-3 p-2">
+            <div class="col-12 col-md-6 col-xxl-3 p-2">
                 <div class="card p-4 rounded-5 h-100">
                      <h4 class="text-purple">💡 Социальное проектирование</h4>
                     <p>Создание условий для самореализации молодёжи в сфере социального проектирования.</p>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 col-xxl-3 p-2">
+            <div class="col-12 col-md-6 col-xxl-3 p-2">
                 <div class="card p-4 rounded-5 h-100">
                      <h4 class="text-purple">🤝 Добровольчество</h4>
                     <p>Вовлечение молодёжи в инновационную, предпринимательскую, добровольческую деятельность.</p>
