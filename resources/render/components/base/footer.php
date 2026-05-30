@@ -51,7 +51,7 @@
                     <div class="w-100 d-flex flex-column gap-2">
                         <a class="footer-link" href="#">Обратная связь</a>
                         <a class="footer-link" href="#">Пресс-служба</a>
-                        <a class="footer-link" href="#">Календарь мероприятий</a>
+                        <a class="footer-link" href="<?php echo \core\routing\Router::route("event.list") ?>">Календарь мероприятий</a>
                     </div>
                 </div>
             </div>

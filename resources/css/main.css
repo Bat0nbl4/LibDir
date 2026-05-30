@@ -4,7 +4,8 @@
 @import "cards.css";
 
 html {
-    --main-color: #32735F;
+    --main-color: #347762;
+    --main-hover-color: #2e6e5a;
     --primary-purple: #7b1fa2;
 }
 
@@ -25,7 +26,6 @@ main {
 }
 
 .header {
-    background-color: white;
     border-bottom: solid 5px;
     border-image: linear-gradient(110deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%) 1;
 }
@@ -48,7 +48,6 @@ main {
 
 .nav-link:hover {
     color: var(--primary-purple);
-    border-bottom: 2px solid var(--main-color);
     padding-bottom: 0;
 }
 

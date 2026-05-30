@@ -4,7 +4,7 @@
     box-shadow: 0 2px 5px lightgray;
 }
 
-.card:hover {
+.card-hover:hover {
     transform: translateY(-5px);
     box-shadow: 0 2px 10px lightgray;
 }

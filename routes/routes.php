@@ -7,6 +7,25 @@ Router::get("/about", [\controllers\main\MainController::class, "about"], "about
 Router::get("/contacts", [\controllers\main\MainController::class, "contacts"], "contacts");
 Router::get("/residents", [\controllers\main\MainController::class, "residents"], "residents");
 
+Router::group("/user", function () {
+    Router::group("", function () {
+        Router::get("/logout", [\controllers\user\UserActionController::class, "logout"], "user.logout");
+        Router::get("/lk", [\controllers\user\UserController::class, "lk"], "user.lk");
+    }, [\middleware\IsAuthMiddleware::class]);
+
+    Router::group("", function () {
+        Router::get("/registration", [\controllers\user\UserController::class, "registration"], "user.registration");
+        Router::post("/store", [\controllers\user\UserActionController::class, "store"], "user.store");
+        Router::get("/login", [\controllers\user\UserController::class, "login"], "user.login");
+        Router::post("/auth", [\controllers\user\UserActionController::class, "auth"], "user.auth");
+    }, [\middleware\IsNotAuthMiddleware::class]);
+});
+
+Router::group("/event", function () {
+    Router::get("/list", [\controllers\user\EventController::class, "list"], "event.list");
+    Router::get("/show", [\controllers\user\EventController::class, "show"], "event.show");
+});
+
 /* --- EXAMPLES ---
 Router::group("/user", function () {
     Router::group("", function () {
