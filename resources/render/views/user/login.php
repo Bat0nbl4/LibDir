@@ -1,3 +1,4 @@
+<?php \core\rendering\View::title(BASE_PAGE_NAME."Авторизация"); ?>
 <div class="container my-5 py-5">
     <div class="row justify-content-center">
         <form method="post" action="<?php echo \core\routing\Router::route("user.auth") ?>" class="col-12 card d-flex flex-column gap-3 p-3 rounded-4" style="max-width: 500px">

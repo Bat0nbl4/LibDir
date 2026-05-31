@@ -1,3 +1,4 @@
+<?php \core\rendering\View::title(BASE_PAGE_NAME."Мой кабинет"); ?>
 <div class="container my-3">
     <div class="row justify-content-center">
         <div class="col-12 card d-flex flex-column gap-3 p-3 rounded-4" style="max-width: 700px">

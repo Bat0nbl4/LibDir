@@ -24,6 +24,9 @@ Router::group("/user", function () {
 Router::group("/event", function () {
     Router::get("/list", [\controllers\user\EventController::class, "list"], "event.list");
     Router::get("/show", [\controllers\user\EventController::class, "show"], "event.show");
+    Router::group("", function () {
+        Router::post("/signup", [\controllers\user\EventActionController::class, "signup"], "user.signup");
+    }, [\middleware\IsAuthMiddleware::class]);
 });
 
 /* --- EXAMPLES ---

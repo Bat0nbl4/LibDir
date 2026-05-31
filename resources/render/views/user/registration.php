@@ -1,3 +1,4 @@
+<?php \core\rendering\View::title(BASE_PAGE_NAME."Регистрация"); ?>
 <script src="<?php echo \core\helpers\Resource::get("js/phone-input.js") ?>"></script>
 <div class="container my-5 py-5">
     <div class="row justify-content-center">

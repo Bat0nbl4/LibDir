@@ -12,6 +12,7 @@
             <li class="nav-item"><a class="nav-link p-1" href="<?php echo \core\routing\Router::route("about") ?>">О нас</a></li>
             <li class="nav-item"><a class="nav-link p-1" href="<?php echo \core\routing\Router::route("contacts") ?>">Контакты</a></li>
             <li class="nav-item"><a class="nav-link p-1" href="<?php echo \core\routing\Router::route("residents") ?>">Резиденты</a></li>
+            <li class="nav-item"><a class="nav-link p-1" href="<?php echo \core\routing\Router::route("event.list") ?>">Афиша</a></li>
         </ul>
         <div class="d-flex flex-row gap-2">
             <?php if (\core\session\Session::has("user")): ?>
@@ -31,6 +32,7 @@
                 <li class="nav-item"><a class="nav-link p-1" href="<?php echo \core\routing\Router::route("about") ?>">О нас</a></li>
                 <li class="nav-item"><a class="nav-link p-1" href="<?php echo \core\routing\Router::route("residents") ?>">Резиденты</a></li>
                 <li class="nav-item"><a class="nav-link p-1" href="<?php echo \core\routing\Router::route("contacts") ?>">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link p-1" href="<?php echo \core\routing\Router::route("event.list") ?>">Афиша</a></li>
             </ul>
         </div>
     </div>
