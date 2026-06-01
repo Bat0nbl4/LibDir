@@ -2,6 +2,7 @@
 
 <div class="container my-5 py-5">
     <h1 class="text-center text-main">Твоя&nbsp;территория развития. Твой&nbsp;КДМ.</h1>
+    <hr>
     <p class="text-center">Твоё будущее начинается здесь!</p>
     <div class="d-flex justify-content-center">
         <?php if (\core\session\Session::has("user")): ?>

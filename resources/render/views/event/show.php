@@ -7,8 +7,12 @@
         <p class="fs-4"><?php echo $event["description"] ?></p>
         <div class="d-flex align-items-center gap-3 flex-wrap">
             <h4 class="m-0 <?php echo $event["status_style"] ?>"><?php echo $event["status"] ?></h4>
-            <?php if ($event["status"] == "Идёт набор"): ?>
+            <?php if ($event["status"] == "Идёт набор" and !$is_appointed): ?>
                 <button type="button" class="btn btn-main" data-bs-toggle="modal" data-bs-target="#event_signup">Записаться</button>
+            <?php elseif ($event["status"] == "Идёт набор" and $is_appointed): ?>
+                <span class="text-success alert alert-success px-2 py-1 m-0">
+                    Вы записаны
+                </span>
             <?php endif; ?>
             <span class="text-secondary ms-auto"><?php echo \core\helpers\Date::normal_date($event["end_date"]) ?></span>
         </div>
@@ -26,9 +30,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="get" action="">
+                    <form method="post" action="<?php echo \core\routing\Router::route("event.signup", ["id" => $event["id"]]) ?>">
                         <p><?php echo $event["start_date"] ?></p>
-                        <button type="button" class="btn btn-main">Записаться</button>
+                        <button type="submit" class="btn btn-main">Записаться</button>
                         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Закрыть окно</button>
                     </form>
                 </div>

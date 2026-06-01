@@ -5,6 +5,7 @@ namespace controllers\user;
 use controllers\Controller;
 use core\data_base\DB;
 use core\rendering\View;
+use core\session\Session;
 
 class EventController extends Controller {
     public function list($page = 1) {
@@ -49,6 +50,9 @@ class EventController extends Controller {
             ->where("event.id", "=", $id)
             ->first();
 
-        View::render("event/show", ["event" => $event]);
+        $is_appointed = false;
+        if (Session::has("user")) $is_appointed = !empty(DB::query()->from("appoint")->where("user_id", "=", Session::get("user.id"))->where("event_id", "=", $event["id"])->first());
+
+        View::render("event/show", ["event" => $event, "is_appointed" => $is_appointed]);
     }
 }
